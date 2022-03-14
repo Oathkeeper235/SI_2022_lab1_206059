@@ -2,4 +2,4 @@ bread x 2
 honey x 7
 milk x 5
 eggs x 8
-sugar x 2
+sugar x 9

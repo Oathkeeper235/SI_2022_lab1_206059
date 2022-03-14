@@ -1,0 +1,211 @@
+4. git clone https://github.com/Oathkeeper235/SI_2022_lab1_206059.git - го копира репозиториумот од github локално во вашиот компјутер.
+   cd SI_2022_lab1_206059 - влегува во клонираниот репозиториум, односно го прави "working directory".
+
+5. git status - Ја користиме за да видиме дали shopping_list сега се наоѓа во untracked files, односно дали успешно сме ја креирале и пополниле.
+   git add shopping_list.txt - Ја додаваме текстуалната датотека во tracked files.
+   git status - Повторно користиме git status за да провериме дали успешно се извршила add командата, shopping_list треба да се наоѓа во files ready to be commited.
+   git commit -m "Add 5 items to the shopping list" - Конечно правиме commit.
+
+6. git status - Ја користиме за да видиме дали промените успешно се зачувале, овој пат shopping_list ќе се наоѓа во "Changes not staged for commit:".
+   git add shopping_list.txt - Ја додаваме текстуалната датотека во tracked files, односно фајлови спремни за commit наредба.
+   git status - Повторно користиме git status за да провериме дали успешно се извршила add командата, shopping_list треба да се наоѓа во changes to be commited.
+   git commit -m "Add quantities to the items." = Конечно правиме commit.
+
+7. git branch branch1
+   git branch branch2
+
+8. git log
+commit 635aeb423ec28284a32dc63ef19d75a0b1e08895 (HEAD -> master, branch2, branch1)
+Author: Oathkeeper235 <atanas_velcevski@hotmail.com>
+Date:   Mon Mar 14 17:01:39 2022 +0100
+
+    Add quantities to the items.
+
+commit 68c6412b4e40b55d5fe8fe375cfa3e10be4f62c6
+Author: Oathkeeper235 <atanas_velcevski@hotmail.com>
+Date:   Mon Mar 14 16:54:21 2022 +0100
+
+    Add 5 items to the shopping list
+
+commit c8b6472a365a0fccee24c1afb714fa6160bdf999 (origin/master, origin/HEAD)
+Author: Atanas Velchevski <53156298+Oathkeeper235@users.noreply.github.com>
+Date:   Mon Mar 14 15:50:41 2022 +0100
+
+    Update README.md
+
+commit b1e9fcbd172ece67376cfa6c9674c1de0045592c
+Author: Atanas Velchevski <53156298+Oathkeeper235@users.noreply.github.com>
+Date:   Mon Mar 14 15:49:17 2022 +0100
+
+    Initial commit
+
+9. git push --all origin - ги синхронизираме сите гранки со оддалечениот репозиториум.
+
+10. git checkout branch1 - Се префрламе од master на branch1.
+
+11. git status - Ја користиме за да видиме дали промените успешно се зачувале, shopping_list ќе се наоѓа во "Changes not staged for commit:".
+    git add shopping_list.txt - Ја додаваме текстуалната датотека во tracked files, односно фајлови спремни за commit наредба.
+    git status - Повторно користиме git status за да провериме дали успешно се извршила add командата, shopping_list треба да се наоѓа во changes to be commited.
+    git commit -m "Change quantity of item #5" - Конечно правиме commit.
+
+12. git checkout master - Се префрламе од branch1 на master.
+
+13. Истиот процес од прашање 11. Само овој пат комитот е: git commit -m "Change quantity of item #2"
+
+14. git push --all origin - ги синхронизираме сите гранки со оддалечениот репозиториум.
+
+15. git checkout branch2 - Се префрламе од master на branch2.
+
+16. Истиот процес од прашање 11. Само овој пат комитот е: git commit -m "Modify item #4"
+
+17. 
+- git log за master:
+commit 4ff6c856d803cf2d3bc2eba342693d1717bdef31 (HEAD -> master, origin/master, origin/HEAD)
+Author: Oathkeeper235 <atanas_velcevski@hotmail.com>
+Date:   Mon Mar 14 17:36:08 2022 +0100
+
+    Change quantity of item #2
+
+commit 635aeb423ec28284a32dc63ef19d75a0b1e08895 (origin/branch2)
+Author: Oathkeeper235 <atanas_velcevski@hotmail.com>
+Date:   Mon Mar 14 17:01:39 2022 +0100
+
+    Add quantities to the items.
+
+commit 68c6412b4e40b55d5fe8fe375cfa3e10be4f62c6
+Author: Oathkeeper235 <atanas_velcevski@hotmail.com>
+Date:   Mon Mar 14 16:54:21 2022 +0100
+
+    Add 5 items to the shopping list
+
+commit c8b6472a365a0fccee24c1afb714fa6160bdf999
+Author: Atanas Velchevski <53156298+Oathkeeper235@users.noreply.github.com>
+Date:   Mon Mar 14 15:50:41 2022 +0100
+
+    Update README.md
+
+commit b1e9fcbd172ece67376cfa6c9674c1de0045592c
+Author: Atanas Velchevski <53156298+Oathkeeper235@users.noreply.github.com>
+Date:   Mon Mar 14 15:49:17 2022 +0100
+
+    Initial commit
+
+
+- git log за branch1:
+commit 1837abb0bcdc10f072b1c8c8a1af521ea27b6db2 (HEAD -> branch1, origin/branch1)
+Author: Oathkeeper235 <atanas_velcevski@hotmail.com>
+Date:   Mon Mar 14 17:27:59 2022 +0100
+
+    Change quantity of item #5
+
+commit 635aeb423ec28284a32dc63ef19d75a0b1e08895 (origin/branch2)
+Author: Oathkeeper235 <atanas_velcevski@hotmail.com>
+Date:   Mon Mar 14 17:01:39 2022 +0100
+
+    Add quantities to the items.
+
+commit 68c6412b4e40b55d5fe8fe375cfa3e10be4f62c6
+Author: Oathkeeper235 <atanas_velcevski@hotmail.com>
+Date:   Mon Mar 14 16:54:21 2022 +0100
+
+    Add 5 items to the shopping list
+
+commit c8b6472a365a0fccee24c1afb714fa6160bdf999
+Author: Atanas Velchevski <53156298+Oathkeeper235@users.noreply.github.com>
+Date:   Mon Mar 14 15:50:41 2022 +0100
+
+    Update README.md
+
+commit b1e9fcbd172ece67376cfa6c9674c1de0045592c
+Author: Atanas Velchevski <53156298+Oathkeeper235@users.noreply.github.com>
+Date:   Mon Mar 14 15:49:17 2022 +0100
+
+    Initial commit
+
+
+
+- git log за branch2:
+commit 61dafa3037aec60016483c692ac9731b2913b0aa (HEAD -> branch2)
+Author: Oathkeeper235 <atanas_velcevski@hotmail.com>
+Date:   Mon Mar 14 17:43:23 2022 +0100
+
+    Modify item #4
+
+commit 635aeb423ec28284a32dc63ef19d75a0b1e08895 (origin/branch2)
+Author: Oathkeeper235 <atanas_velcevski@hotmail.com>
+Date:   Mon Mar 14 17:01:39 2022 +0100
+
+    Add quantities to the items.
+
+commit 68c6412b4e40b55d5fe8fe375cfa3e10be4f62c6
+Author: Oathkeeper235 <atanas_velcevski@hotmail.com>
+Date:   Mon Mar 14 16:54:21 2022 +0100
+
+    Add 5 items to the shopping list
+
+commit c8b6472a365a0fccee24c1afb714fa6160bdf999
+Author: Atanas Velchevski <53156298+Oathkeeper235@users.noreply.github.com>
+Date:   Mon Mar 14 15:50:41 2022 +0100
+
+    Update README.md
+
+commit b1e9fcbd172ece67376cfa6c9674c1de0045592c
+Author: Atanas Velchevski <53156298+Oathkeeper235@users.noreply.github.com>
+Date:   Mon Mar 14 15:49:17 2022 +0100
+
+    Initial commit
+
+
+18. Откако ќе ги извршиме промените во датотеката shopping_list го правиме следното:
+    git add shopping_list.txt
+    git commit --amend -m "Modify item #4 and add item #6" - оваа команда ќе го замени претходниот комитиран фајл со новиот променет фајл, и ќе ја промени пораката на комитот.
+
+19. 
+- git log за branch2 (Тој е единствениот променет log):
+commit 527cabeb554396aaa5bfdae4360f4a3ffb0bcfb4 (HEAD -> branch2)
+Author: Oathkeeper235 <atanas_velcevski@hotmail.com>
+Date:   Mon Mar 14 17:43:23 2022 +0100
+
+    Modify item #4 and add item #6
+
+commit 635aeb423ec28284a32dc63ef19d75a0b1e08895 (origin/branch2)
+Author: Oathkeeper235 <atanas_velcevski@hotmail.com>
+Date:   Mon Mar 14 17:01:39 2022 +0100
+
+    Add quantities to the items.
+
+commit 68c6412b4e40b55d5fe8fe375cfa3e10be4f62c6
+Author: Oathkeeper235 <atanas_velcevski@hotmail.com>
+Date:   Mon Mar 14 16:54:21 2022 +0100
+
+    Add 5 items to the shopping list
+
+commit c8b6472a365a0fccee24c1afb714fa6160bdf999
+Author: Atanas Velchevski <53156298+Oathkeeper235@users.noreply.github.com>
+Date:   Mon Mar 14 15:50:41 2022 +0100
+
+    Update README.md
+
+commit b1e9fcbd172ece67376cfa6c9674c1de0045592c
+Author: Atanas Velchevski <53156298+Oathkeeper235@users.noreply.github.com>
+Date:   Mon Mar 14 15:49:17 2022 +0100
+
+    Initial commit
+
+
+20. git checkout master
+    git merge branch1
+
+21. git merge branch2 - Се појавува конфликт.
+    Конфликтот го решавам со прифаќање на промените кои пристигаат од branch2 и отстранување на моменталните промени. Потоа со помош на командите го комитнувам поправениот документ:
+    git add shopping_list.txt
+    $ git commit -m "Merge branch 'branch2'"
+    [master ce7f983] Merge branch 'branch2'
+
+22. git add 206059.txt
+    git commit -m "Add docs"
+ 
+
+
+
+

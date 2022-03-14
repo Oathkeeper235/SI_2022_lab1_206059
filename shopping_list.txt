@@ -1,5 +1,5 @@
-bread
-honey
-milk
-eggs
-sugar
+bread x 2
+honey x 3
+milk x 5
+eggs x 8
+sugar x 2
